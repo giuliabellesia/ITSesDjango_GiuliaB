@@ -1,0 +1,52 @@
+html, body {
+    margin: 0;
+    padding: 10px;    
+    background-color:rgb(254, 183, 254);
+
+}
+
+h1 {
+    color: rgb(254, 223, 249);
+    text-align: center;
+    font-family: Arial, serif;
+}
+
+.navbar{
+    color:deeppink;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    text-spaced: 10px;
+    font: white;
+    font-family: Arial, serif;
+    hover: bold;
+}
+
+nav > a > img {
+  height: 3rem;
+}
+
+#registrati {
+  display: none;
+  width: 80vw;
+  border: 1rem solid darkgray;
+  background-color: rgb(234, 0, 255);
+  height: 50vh;
+  position: fixed;
+  top: 10vh;
+  left: 10vw;
+}
+
+form {
+  padding: 2rem;
+}
+
+.domande{
+    color:deeppink;
+    padding: 10px;
+    margin-left: 30px;
+    text-align: left;
+    text-spaced: 10px;
+    font: white;
+    font-family: Arial, serif;
+}

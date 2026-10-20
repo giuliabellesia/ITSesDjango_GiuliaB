@@ -1,0 +1,81 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="{% static 'css/style.css' %}" rel="stylesheet"/>
+        <title>{%block title %}Default title{% endblock %}</title>
+        <script src="{% static 'js/toggle-modals.js' %}" defer></script>
+    </head>
+    <body>
+        <h1>Dance School</h1>
+        <hr>
+        <nav class="navbar">
+            <a
+                img="img_logo.jpg"
+                href="{% url 'home' %}"  #url è django tag che cerca in url definiti e sostituisce con path completa
+                title="Home"
+                hover=bold
+            >Home</a>
+            <a
+                href="{% url 'about' %}"
+                title="About"
+                hover=bold
+            >About</a>
+            <a
+                href="#"
+                title="Registrati"
+                onClick="toggleRegistrati()"
+                hover=bold
+            >Registrati</a>
+            <a
+                href="#"
+                title="Accedi"
+                onClick="toggleAccedi()"
+                hover=bold
+            >Accedi</a>
+            <a
+                href="{% url 'question_list' %}"
+                title="Domande"
+                hover="Domande"
+            >Domande</a>
+        </nav>
+
+        <section id="registrati">
+            <form>
+                <p>
+                    <label for="registrati-nome">Nome</label>
+                    <input type="text" name="nome" id="registrati-nome">
+                </p>
+                <p>
+                    <label for="registrati-cognome">Cognome</label>
+                    <input type="text" name="cognome" id="registrati-cognome">
+                </p>
+                <p>
+                    <label for="registrati-email">Email</label>
+                    <input type="email" name="email" id="registrati-email">
+                </p>
+                <p>
+                    <button type="submit">Invia</button>
+                </p>
+            </form>
+        </section>
+        <section id="accedi">
+            <form>
+                <p>
+                    <label for="accedi-email">Email</label>
+                    <input type="email" name="email" id="accedi-email">
+                </p>
+                <p>
+                    <label for="accedi-password">Password</label>
+                    <input type="password" name="password" id="accedi-password">
+                </p>
+                <p>
+                    <button type="submit">Invia</button>
+                </p>
+            </form>
+        </section>
+        <main>{%block content%} {%endblock%}</main>
+    </body>
+</html>
