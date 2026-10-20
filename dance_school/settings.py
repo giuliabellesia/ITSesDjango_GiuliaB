@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'app_dance_school',
+    'schoolmanagement',
 ]
 
 MIDDLEWARE = [
