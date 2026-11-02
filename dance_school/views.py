@@ -6,6 +6,8 @@ __all__ = [
     "test_view",
     "about",
     "register",
+    #"school_list",
+    #"school_details",
 ]
 
 #def home(request):
@@ -19,3 +21,14 @@ def about(request):
 
 def register(request):
     return render(request, "register.html")
+
+def school(request):
+    return render(request, "school.html")
+
+"""
+def school_list(request):
+    return render(request, "school_list.html")
+
+def school_details(request):
+    return render(request, "school_details.html")
+"""
