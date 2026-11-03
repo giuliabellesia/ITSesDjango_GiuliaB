@@ -1,0 +1,8 @@
+{% extends "base.htlm" %}
+{% block title %}Dettaglio di {{ object }}{% endblock %}
+{% block content %} 
+    <h1>Dettaglio di {{ object }} </h1>
+        {% block detail-content %} 
+            <p>id:{{ object.id }}</p>
+        {% endblock %}
+{% endblock %}

@@ -7,7 +7,8 @@ __all__ = [
 ]
 
 #crea due class-based view per rappresentare su template:
-#a. i dettagli di una singola entry del model School; class School_details(): 
+#a. i dettagli di una singola entry del model School; class School_details():  
+#ha tenuto funzioni anche se ci sono classi già definite
 def School_details(request, pk):
     scuola = get_object_or_404(School, pk=pk)
     return render(

@@ -8,6 +8,10 @@
             <td>{{ el.name }}</td>
             <td>{{ el.full_address }}</td>
             <td>{{ el.country }}</td>
+            <td>{{ el.phone }}</td>
+            {% if el.email %}
+                <td>{{ el.email }}</td>
+            {% endif %}
             <td><a href="{% url 'dettaglio_scuola' el.id %}">Mostra</a></td>
         </tr>
     {% endfor %}
