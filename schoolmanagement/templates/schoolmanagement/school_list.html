@@ -12,7 +12,7 @@
             {% if el.email %}
                 <td>{{ el.email }}</td>
             {% endif %}
-            <td><a href="{% url 'dettaglio_scuola' el.id %}">Mostra</a></td>
+            <td><a href="{% url 'School_details' el.id %}">Mostra</a></td>
         </tr>
     {% endfor %}
 {% endblock %}
