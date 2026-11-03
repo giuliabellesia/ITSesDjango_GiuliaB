@@ -18,4 +18,3 @@ urlpatterns = [
     #scritta così perche int è id inserito da utente e primary key è la corrispondente
 
 ]
-

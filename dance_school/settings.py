@@ -38,10 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     
-    'crispy-forms',
-    'crispy-bootstrap5',
+    #'crispy-forms',
+    #'crispy-bootstrap5',
 
     'schoolmanagement',
+    'schoolapp',
 ]
 
 MIDDLEWARE = [
