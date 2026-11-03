@@ -6,7 +6,7 @@ __all__ = [
     'Course',
 ]
 
-class DayOftheWeek(models.Model):
+class DayOfTheWeek(models.Model):
     number = models.CharField(max_length=5);
     name = models.CharField(max_length=20);
 
