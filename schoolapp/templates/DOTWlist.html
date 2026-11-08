@@ -1,0 +1,13 @@
+{% extends "base_list.html" %}
+{% block custom-type %}Calendario{% endblock %}
+{% block list-header %}<th>Id</th><th>Nome</th><th>Numero</th>{% endblock %}
+{% block list-rows %}
+    {% for giorno in object_list %}
+        <tr>
+            <td>{{ giorno.id }}</td>
+            <td>{{ giorno.nome }}</td>
+            <td>{{ giorno.numero }}</td>
+            <td><a href="{% url 'dettaglio_giorni' giorno.pk %}">{{ giorno.nome }}</a></td>
+        </tr>
+    {% endfor %}
+{% endblock %}

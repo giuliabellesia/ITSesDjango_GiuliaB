@@ -41,8 +41,8 @@ INSTALLED_APPS = [
     #'crispy-forms',
     #'crispy-bootstrap5',
 
-    'schoolmanagement',
-    'schoolapp',
+    'schoolmanagement', #schoolmanagement.apps.SchoolmanagementConfig
+    'schoolapp', #same
 ]
 
 MIDDLEWARE = [

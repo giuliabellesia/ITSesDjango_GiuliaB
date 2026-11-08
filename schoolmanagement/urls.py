@@ -13,8 +13,9 @@ from schoolmanagement import views
 urlpatterns = [ 
     path("", views.School_list, name="School_list"), 
     #scritta così pk essendo inclusa significa che school/, registrata di là, mi da gia la lista di scuole senza aggiungere "" niente
-    #path('school_details/', views.School_details, name="School_details"),
-    path("<int:pk>/", views.School_details, name="School_details"), 
-    #scritta così perche int è id inserito da utente e primary key è la corrispondente
 
+    path("<int:pk>/", views.School_details, name="School_details"), 
+    #scritta così perche int è id inserito da utente e primary key è la var corrispondente
+    
+    #path("api/v1/example/", views.api_example, name="api_example"),
 ]

@@ -23,5 +23,5 @@ def full_address(self):
     return f"{self.street},  {self.zipcode}, {self.city} ({self.id})"
 
 #questo è per stampare i nomi delle scuole di danza
-def __str__(self) -> str:        
+def __str__(self):        
     return self.name

@@ -1,22 +1,45 @@
 from django.db import models
+from schoolmanagement.models import School
 # Create your models here. elenco:
 __all__ = [
     'DayOftheWeek',
     'Classroom',
-    'Course',
+    'Corso',
 ]
 
 class DayOfTheWeek(models.Model):
-    number = models.CharField(max_length=5);
-    name = models.CharField(max_length=20);
+    num = models.PositiveIntegerField(default=0);
+    nome = models.CharField(max_length=20);
+
+    def __str__(self):
+        return self.nome
 
 class Classroom(models.Model):
-    name = models.CharField(max_length=20);
-    capacity = models.CharField(max_length=5);
+    nome = models.CharField(max_length=20);
+    capacita = models.PositiveIntegerField(default=0);
 
-class Course(models.Model):
+    def __str__(self):
+        return f"{self.nome}, capacita: {self.capacita}"
+
+class Corso(models.Model):
     subject = models.CharField(max_length=30);
-    day_of_the_week = models.CharField(max_length=5); #(foreign key a DayOfTheWeek);
-    starting_hour = models.CharField(max_length=7);
-    classroom = models.CharField(max_length=20); #(foreign key a Classroom)
-    school = models.CharField(max_length=30) #(foreign key a School)
+    orario_inizio = models.PositiveIntegerField(default=0);
+
+    giorno = models.ForeignKey(#(foreign key a DayOfTheWeek):
+        DayOfTheWeek,
+        on_delete=models.CASCADE,
+        related_name="corsi"
+    ); 
+    classroom = models.ForeignKey(#(foreign key a Classroom)
+        Classroom,
+        on_delete=models.CASCADE,
+        related_name="corsi"
+    ); 
+    scuola = models.ForeignKey(#(foreign key a School)
+        School,
+        on_delete=models.CASCADE,
+        related_name="corsi"
+    ); 
+
+    def __str__(self):
+        return f"{self.subject}: {self.giorno} alle {self.orario_inizio}"

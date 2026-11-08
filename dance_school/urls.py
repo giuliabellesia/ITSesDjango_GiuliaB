@@ -24,4 +24,5 @@ urlpatterns = [
     path('about/', views.about, name="about"),
     path('register/', views.register, name="register"),
     path('school/', include("schoolmanagement.urls")), #così includo schoolmanagement/urls.py
+    path('schoolapp/', include ("schoolapp.urls")),
 ]

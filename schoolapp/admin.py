@@ -1,7 +1,7 @@
 from django.contrib import admin
-from schoolapp.models import DayOfTheWeek, Classroom, Course
+from schoolapp.models import DayOfTheWeek, Classroom, Corso
 
 # Register your models here.
 admin.site.register(DayOfTheWeek);
 admin.site.register(Classroom);
-admin.site.register(Course);
+admin.site.register(Corso);
