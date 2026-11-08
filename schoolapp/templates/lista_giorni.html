@@ -7,7 +7,11 @@
             <td>{{ giorno.id }}</td>
             <td>{{ giorno.nome }}</td>
             <td>{{ giorno.numero }}</td>
-            <td><a href="{% url 'dettaglio_giorni' giorno.pk %}">{{ giorno.nome }}</a></td>
+            <td><a href="{% url 'dettaglio_giorno' giorno.pk %}">{{ giorno.nome }}</a></td>
+            <td><a href="{% url 'modifica_giorno' giorno.pk %}">Modifica</a></td>
         </tr>
     {% endfor %}
+    {% block add-new %}
+        <td><a href="{% url 'crea_giorno' giorno.pk %}">Aggiungi</a></td>
+    {% endblock %}
 {% endblock %}

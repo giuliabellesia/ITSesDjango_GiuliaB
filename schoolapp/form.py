@@ -1,2 +1,0 @@
-{}
-<form action=”” methos=”post”>

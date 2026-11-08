@@ -1,0 +1,11 @@
+{% extends "base_list.html" %}
+{% block custom-type %}Corsi{% endblock %}
+{% block list-header %}<th>Id</th><th>Nome</th>{% endblock %}
+{% block list-rows %}
+    {% for corso in object_list %}
+        <tr>
+            <td>{{ corso.id }}</td>
+            <td>{{ corso.subject }}</td>
+        </tr>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "base_detail.html" %}
+{% block detail-content %}
+    <p>ID: {{ object.id }}</p>
+    <p>Nome: {{ object.subject }}</p>
+    <p>Orario: {{ object.orario_inizio }}</p>
+    <p>Giorno: {{ object.giorno }}</p>
+    <p>Aula: {{ object.classroom }}</p>
+    <p>Scuola: {{ object.scuola }}</p>
+{% endblock %}
